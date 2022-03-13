@@ -1,0 +1,61 @@
+html {
+    background: #43cea2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #185a9d, #43cea2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #185a9d, #43cea2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card{
+    background-color: white;
+    width: 326px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+    &-body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid rgba(153, 153, 153, 0.383);
+        &-img{
+            border: 5px solid white;
+            border-radius: 50%;
+            margin-top: calc(-48px - 5px);
+            background-color: white;
+            max-width: 30%;
+        }
+        &-title{
+            font-size: 30px;
+            color: ecc94b;
+        }
+        &-text{
+            text-align: center;
+            margin-top: 20px;
+        }
+
+    &-form{
+        padding-bottom: 20px;
+        &-input{
+            text-align: center;
+        }
+        &-select{
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+    }
+}
+
+}
+.ph-center {
+    border: 1px solid rgba(0, 0, 0, 0.205);
+}
+.ph-center::-webkit-input-placeholder {
+    text-align: center;
+    line-height: 100px;/* Centrado vertical */
+}

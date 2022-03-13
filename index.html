@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima</title>
+    <link rel="icon" href="./img/app-del-clima.png">
+    <link href="css/estilos.css" rel="stylesheet">
+    <link href="css/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <main class="flex">
+        <article class="card">
+            <img src="./img/bg-pattern-card.svg" alt="" class="card-header">
+            <div class="card-body">
+                <img id="img" src="./img/clima (1).png" alt="Pito" class="card-body-img" onerror="this.src='./img/error-404.png'">
+                <div class="card-body-title">
+                    <h1 id="titulo" class="uppercase text-center"><b>Busca el Clima</b></h1>
+                </div>
+                <div id="resultado" class="card-body-text">
+                    <p>Agrega tu cuidad y país, el resultado se mostrará aquí</p>
+                </div>
+                <div class="card-body-form">
+                    <form id="formulario" class="mt-10 " action="#" method="POST">
+                        <div class="card-body-form-input">
+                            <input type="text" name="ciudad" id="ciudad" placeholder="Escribe tu Ciudad" class=" p-2 rounded ph-center"/>
+                        </div>
+                        <div class="card-body-form-select">
+                            <select onchange="cambiarIcoPais()"
+                        class=" bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" 
+                        id="pais">
+                        <option disabled selected value="">-- Seleccione --</option>
+                        <option value="AR">Argentina</option>
+                        <option value="CO">Colombia</option>
+                        <option value="CR">Costa Rica</option>
+                        <option value="ES">España</option>
+                        <option value="US">Estados Unidos</option>
+                        <option value="MX">México</option>
+                        <option value="PE">Perú</option>
+                    </select>
+                        </div>
+                        <div clas="buton">
+                            <input 
+                            type="submit"
+                            class="mt-5 w-full bg-yellow-500 p-3  uppercase font-bold cursor-pointer rounded"
+                            value="Obtener Clima" 
+                        />
+                        </div>
+                    
+                    </form>
+                    <div class="container"></div>
+
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- <div class="container mx-auto ">
+        <h1 id="titulo" class="text-4xl mt-5 text-white font-bold uppercase text-center">Busca el Clima</h1>
+        <div class="max-w-lg mx-auto ">
+
+            <div class="p-6 mt-10">
+                <div id="resultado">
+                    <p class="text-center text-white mt-6">Agrega tu ciudad y país, el resultado se mostrará aquí</p>
+                </div>
+            </div>
+            
+            <form id="formulario" class="mt-10 " action="#" method="POST">
+                <div class="mt-5">
+                    <input type="text" name="ciudad" id="ciudad" placeholder="Escribe tu Ciudad" class="w-full p-2 rounded"/>
+                </div>
+                <div class="mt-5">
+                    <select 
+                        class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" 
+                        id="pais">
+                        <option disabled selected value="">-- Seleccione --</option>
+                        <option value="AR">Argentina</option>
+                        <option value="CO">Colombia</option>
+                        <option value="CR">Costa Rica</option>
+                        <option value="ES">España</option>
+                        <option value="US">Estados Unidos</option>
+                        <option value="MX">México</option>
+                        <option value="PE">Perú</option>
+                    </select>
+                </div>
+
+                <input 
+                    type="submit"
+                    class="mt-5 w-full bg-yellow-500 p-3  uppercase font-bold cursor-pointer rounded"
+                    value="Obtener Clima"
+                />
+
+            </form>
+
+        </div>
+    </div> -->
+
+    <script src="js/app.js"></script>
+</body>
+</html>
